@@ -3,10 +3,11 @@
 <div>
 <h3><%= link_to prop.title, prop %></h3>
 <p><%= prop.text %></p>
-<h3><%= link_to 'Check Out This Proposition', prop %></h3>
+<h3><%= link_to 'Show', prop %></h3>
 <h3><%= link_to 'Edit', edit_prop_path(prop) %></h3>
-
-
+<h3><%= link_to 'Delete', prop_path(prop),
+                          method: :delete,
+                          data: ( 'Are you sure?' ) %></h3>
 
 </div>
 

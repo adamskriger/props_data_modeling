@@ -35,6 +35,13 @@ class PropsController < ApplicationController
     end
   end
 
+  def destroy
+    @prop = Prop.find(params[:id])
+    @prop.destroy
+
+    redirect_to props_path
+  end
+
 end
 
 private

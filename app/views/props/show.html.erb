@@ -9,6 +9,13 @@
   <%= @prop.text %>
 </p>
 
-<p>
+
+<h2>Comments</h2>
+  <div><%= render @prop.comments %></div>
+
+
+  <h2>Add a Comment</h2>
+
+  <%= render 'comments/form' %>
+  <%= link_to 'Edit', edit_prop_path(@prop)  %>
   <%= link_to 'Back to All Props', props_path  %>
-</p>
