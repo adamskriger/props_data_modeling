@@ -6,6 +6,13 @@ class CommentsController < ApplicationController
     redirect_to prop_path(@prop)
   end
 
+  def destroy
+    @prop = Prop.find(params[:prop_id])
+    @comment = @prop.comments.find(params[:id])
+    @comment.destroy
+    redirect_to prop_path(@prop)
+  end
+
 end
 
 private
