@@ -42,9 +42,13 @@ class PropsController < ApplicationController
     redirect_to props_path
   end
 
+  def select
+    @prop = Prop.find(params[:choice])
+  end
+
 end
 
 private
   def prop_params
-    params.require(:prop).permit(:title, :text)
+    params.require(:prop).permit(:title, :text, :choice)
   end
