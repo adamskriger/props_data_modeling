@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
+  get 'signup', to: 'users#new'
+  post 'users', to: 'users#create'
 
 
   # Example of regular route:
