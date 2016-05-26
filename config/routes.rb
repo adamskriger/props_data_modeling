@@ -25,6 +25,7 @@ Rails.application.routes.draw do
     resources :props do
       resources :comments
     end
+    resources :answers
 
   # Example resource route with options:
   #   resources :products do
