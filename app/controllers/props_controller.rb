@@ -23,6 +23,7 @@ class PropsController < ApplicationController
     else
     render 'new'
     end
+    
   end
 
   def update
