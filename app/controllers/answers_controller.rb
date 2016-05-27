@@ -1,23 +1,28 @@
 class AnswersController < ApplicationController
+  attr_accessor :user, :answer
 
   def index
 
   end
 
   def new
+    @answer = Answer.find(params[:prop_id])
     @prop = Prop.find(params[:prop_id])
+
   end
 
   def create
-    @prop = Prop.find(params[:prop_id])
-    @answer = @prop.answers.create(params[:choice])
+    @user = User.find(session[:user_id])
+    @answer = @user.answers.create(params[:choice])
 
     if @answer.save
+
     redirect_to root_path
 
     else
     render 'new'
     end
+
 
   end
 
