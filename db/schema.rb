@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160525152234) do
+ActiveRecord::Schema.define(version: 20160527141210) do
+
+  create_table "answers", force: :cascade do |t|
+    t.string   "choice"
+    t.integer  "prop_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "created_by"
+    t.integer  "user_id"
+  end
+
+  add_index "answers", ["prop_id"], name: "index_answers_on_prop_id"
 
   create_table "comments", force: :cascade do |t|
     t.string   "commenter"
@@ -42,8 +53,18 @@ ActiveRecord::Schema.define(version: 20160525152234) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "password_digest"
+    t.string   "created_by"
   end
 
   add_index "users", ["prop_id"], name: "index_users_on_prop_id"
+
+  create_table "wins", force: :cascade do |t|
+    t.string   "correctAnswer"
+    t.integer  "user_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "wins", ["user_id"], name: "index_wins_on_user_id"
 
 end
