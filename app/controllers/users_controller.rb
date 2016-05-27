@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-
+  before_action :require_admin, only: [:index]
   # GET /users
   # GET /users.json
   def index
@@ -59,6 +59,13 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def require_admin
+    if logged_in? && !current_user.admin?
+      flash[:danger]="Only admin users can perform that action"
+      redirect_to root_path
     end
   end
 
