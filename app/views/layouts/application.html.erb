@@ -2,11 +2,25 @@
 <html>
 <head>
   <title>Props</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <!-- Include the compiled Ratchet CSS -->
+
+  <!-- Include the compiled Ratchet JS -->
+  <%= stylesheet_link_tag    "ratchet/ratchet", :media => "all" %>
+  <%= javascript_include_tag "ratchet/ratchet.js" %>
   <%= csrf_meta_tags %>
+
+  <!-- Sets initial viewport load and disables zooming  -->
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+<!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
 </head>
 <body>
+
   <%= render 'partials/navigation' %>
 
 

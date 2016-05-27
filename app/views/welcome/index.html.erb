@@ -1,8 +1,28 @@
-<h1>Hello and Welcome to Props</h1>
+<header class="bar bar-nav">
+     <h1 class="title">Props</h1>
+   </header>
 
-<p>Predict the outcome of real life situations and earn PropDollars when you're right. Play against your friends, colleagues and other Proppers on the site!</p>
+<p></p>
 
 
-<div><%= link_to 'All Props', controller: 'props'  %></div>
+<div></div>
 
-<div><%= link_to 'Create a Prop', new_prop_path  %></div>
+<div></div>
+<!--  -->
+<div class="content">
+     <p class="content-padded">Predict the outcome of real life situations and earn PropDollars when you're right. Play against your friends, colleagues and other Proppers on the site!</p>
+     <div class="card">
+       <ul class="table-view">
+         <li class="table-view-cell">
+           <a class="push-right">
+             <strong><%= link_to 'All Props', controller: 'props'  %></strong>
+           </a>
+         </li>
+         <li class="table-view-cell">
+           <a class="push-right">
+             <strong><%= link_to 'Create a Prop', new_prop_path  %></strong>
+           </a>
+         </li>
+       </ul>
+     </div>
+   </div>
