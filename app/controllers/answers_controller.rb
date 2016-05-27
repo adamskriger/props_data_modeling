@@ -6,14 +6,17 @@ class AnswersController < ApplicationController
   end
 
   def new
-    @answer = Answer.find(params[:prop_id])
+    @user = User.find(session[:user_id])
+
     @prop = Prop.find(params[:prop_id])
+    @answer = Answer.new
 
   end
 
   def create
+
     @user = User.find(session[:user_id])
-    @answer = @user.answers.create(params[:choice])
+    @answer = @user.answers.create(answer_params)
 
     if @answer.save
 
@@ -31,4 +34,9 @@ class AnswersController < ApplicationController
     @answer = Answer.find params[:id]
 
   end
+end
+
+private
+def answer_params
+  params.require(:answer).permit(:choice, :id)
 end
