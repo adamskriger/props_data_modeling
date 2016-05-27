@@ -19,7 +19,7 @@ class PropsController < ApplicationController
   def create
     @prop = Prop.new(prop_params)
 
-    @answer = Answer.pluck(:choice)
+    @answer = Answer.new
 
     if @prop.save
     redirect_to @prop

@@ -1,13 +1,20 @@
 class AnswersController < ApplicationController
 
+  def index
+
+  end
+
   def new
-    @answer = Answer.new
+    @prop = Prop.find(params[:prop_id])
   end
 
   def create
-    @answer = Answer.new(answer_params)
+    @prop = Prop.find(params[:prop_id])
+    @answer = @prop.answers.create(params[:choice])
+
     if @answer.save
-    redirect_to @answer
+    redirect_to root_path
+
     else
     render 'new'
     end
@@ -16,12 +23,7 @@ class AnswersController < ApplicationController
 
 
   def show
-    @answer = Answer.find params[:id]      
+    @answer = Answer.find params[:id]
 
   end
-end
-private
-def answer_params
-  params.require(:answer).permit(:choice)
-
 end
