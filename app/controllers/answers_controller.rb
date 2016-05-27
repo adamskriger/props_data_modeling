@@ -6,15 +6,16 @@ class AnswersController < ApplicationController
   end
 
   def new
+    @prop = Prop.find(params[:prop_id])
+
     @user = User.find(session[:user_id])
 
-    @prop = Prop.find(params[:prop_id])
     @answer = Answer.new
 
   end
 
   def create
-
+    @prop = Prop.find(params[:prop_id])
     @user = User.find(session[:user_id])
     @answer = @user.answers.create(answer_params)
 
@@ -24,6 +25,10 @@ class AnswersController < ApplicationController
 
     else
     render 'new'
+    end
+
+    if @answer.choice == @prop.choice
+      puts "hello"
     end
 
 
@@ -38,5 +43,5 @@ end
 
 private
 def answer_params
-  params.require(:answer).permit(:choice, :id)
+  params.require(:answer).permit(:choice, :id, :prop_id)
 end
