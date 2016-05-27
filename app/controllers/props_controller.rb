@@ -1,4 +1,5 @@
 class PropsController < ApplicationController
+  attr_accessor :user, :answer, :choice, :prop
 
   def index
     @props=Prop.all
@@ -27,19 +28,28 @@ class PropsController < ApplicationController
     render 'new'
     end
 
-    if @prop.choice == @answer
-      puts "you did it"
-    end
-
   end
 
   def update
+    @user = User.find(session[:user_id])
+
     @prop = Prop.find(params[:id])
+    @answer = Answer.find(session[:user_id])
 
     if @prop.update(prop_params)
       redirect_to @prop
     else
       render 'edit'
+    end
+
+    if @answer.choice == @prop.choice
+      puts "hello"
+      @user.score += 7
+      @user.save
+    else
+      @user.score -= 7
+      @user.save
+
     end
   end
 

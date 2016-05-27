@@ -23,3 +23,5 @@
   <%= render 'comments/form' %>
   <%= link_to 'Edit', edit_prop_path(@prop)  %>
   <%= link_to 'Back to All Props', props_path  %>
+
+  <li><%= link_to 'Assign an answer', new_prop_answer_path(@prop)  %></li>
