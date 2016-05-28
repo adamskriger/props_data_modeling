@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     flash[:success] = "You have logged out"
     redirect_to root_path
   end
-  
+
   def create
     user = User.find_by(email: params[:session][:email])
     if user && user.authenticate(params[:session][:password])
