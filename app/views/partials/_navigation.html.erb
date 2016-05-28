@@ -2,9 +2,9 @@
 
 <% if logged_in? %>
 <li><%= link_to 'log out', logout_path, method: :delete  %></li>
-
+<div><%= "Admin" if current_user.admin? %></div>
 <% else %>
 <li><%= link_to 'log in', login_path  %></li>
-<li><%= link_to 'Sign Up', signup_path  %></li>
+<li><%= link_to 'Sign Up', new_user_path  %></li>
 
 <% end %>
