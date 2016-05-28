@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160528141345) do
+ActiveRecord::Schema.define(version: 20160528175017) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,8 +58,11 @@ ActiveRecord::Schema.define(version: 20160528141345) do
     t.string   "password_digest"
     t.string   "created_by"
     t.boolean  "admin",           default: false
+    t.integer  "answers_id"
+    t.integer  "answer_id"
   end
 
+  add_index "users", ["answer_id"], name: "index_users_on_answer_id", using: :btree
   add_index "users", ["prop_id"], name: "index_users_on_prop_id", using: :btree
 
   create_table "wins", force: :cascade do |t|
@@ -71,4 +74,5 @@ ActiveRecord::Schema.define(version: 20160528141345) do
 
   add_index "wins", ["user_id"], name: "index_wins_on_user_id", using: :btree
 
+  add_foreign_key "users", "answers"
 end
