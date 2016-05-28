@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160527214453) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "answers", force: :cascade do |t|
     t.string   "choice"
     t.integer  "prop_id"
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 20160527214453) do
     t.integer  "user_id"
   end
 
-  add_index "answers", ["prop_id"], name: "index_answers_on_prop_id"
+  add_index "answers", ["prop_id"], name: "index_answers_on_prop_id", using: :btree
 
   create_table "comments", force: :cascade do |t|
     t.string   "commenter"
@@ -32,7 +35,7 @@ ActiveRecord::Schema.define(version: 20160527214453) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "comments", ["prop_id"], name: "index_comments_on_prop_id"
+  add_index "comments", ["prop_id"], name: "index_comments_on_prop_id", using: :btree
 
   create_table "props", force: :cascade do |t|
     t.string   "title"
@@ -43,7 +46,7 @@ ActiveRecord::Schema.define(version: 20160527214453) do
     t.string   "choice"
   end
 
-  add_index "props", ["user_id"], name: "index_props_on_user_id"
+  add_index "props", ["user_id"], name: "index_props_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
@@ -57,7 +60,7 @@ ActiveRecord::Schema.define(version: 20160527214453) do
     t.boolean  "admin",           default: false
   end
 
-  add_index "users", ["prop_id"], name: "index_users_on_prop_id"
+  add_index "users", ["prop_id"], name: "index_users_on_prop_id", using: :btree
 
   create_table "wins", force: :cascade do |t|
     t.string   "correctAnswer"
@@ -66,6 +69,6 @@ ActiveRecord::Schema.define(version: 20160527214453) do
     t.datetime "updated_at",    null: false
   end
 
-  add_index "wins", ["user_id"], name: "index_wins_on_user_id"
+  add_index "wins", ["user_id"], name: "index_wins_on_user_id", using: :btree
 
 end
