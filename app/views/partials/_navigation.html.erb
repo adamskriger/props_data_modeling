@@ -1,7 +1,7 @@
 <li><%= link_to 'Props Home', root_path  %></li>
 
 <% if logged_in? %>
-<li><%= link_to 'log out', sessions_path, method: :delete  %></li>
+<li><%= link_to 'log out', logout_path, method: :delete  %></li>
 <div><%= "Admin" if current_user.admin? %></div>
 <% else %>
 <li><%= link_to 'log in', login_path  %></li>
