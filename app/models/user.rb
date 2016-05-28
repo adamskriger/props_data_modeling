@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   has_many :props, dependent: :destroy
   has_many :answers
+  has_many :user_answers
+  has_many :answers, through: :user_answers
   has_many :created_answers, :class_name => "Answer", :foreign_key => "created_by"
   before_save { self.email = email.downcase }
   validates :username, presence: true, uniqueness: {case_sensitive: false}, length: {minimum: 3, maximum: 25}
