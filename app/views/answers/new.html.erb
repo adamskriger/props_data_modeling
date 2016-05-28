@@ -6,6 +6,8 @@
   <%= f.radio_button(:choice, "B") %>
   <%= f.label(:choice, "The Correct Answer is B") %>
 
+  <%= f.hidden_field :prop_id, :value => @prop.id %>
+
    <p>
     <%= f.submit %>
   </p>

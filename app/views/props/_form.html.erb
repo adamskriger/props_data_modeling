@@ -32,6 +32,8 @@ prohibited this prop from being saved:
   <%= f.label(:choice, "The Correct Answer is B") %>
   <%= f.radio_button(:choice, "C") %>
   <%= f.label(:choice, "The Answer Has Yet To Be Determined") %>
+  <%= f.hidden_field :user_id, :value => @user.id %>
+  <%= f.hidden_field :prop_id, :value => @prop.id %>
 
 
   <p>

@@ -1,5 +1,5 @@
 class PropsController < ApplicationController
-  attr_accessor :user, :answer, :choice, :prop
+  attr_accessor :user, :answer, :choice, :prop_id, :prop
 
   def index
     @props=Prop.all
@@ -11,14 +11,20 @@ class PropsController < ApplicationController
 
   def new
     @prop = Prop.new
+    @user = User.find(session[:user_id])
+
   end
 
   def edit
     @prop = Prop.find(params[:id])
+    @user = User.find(session[:user_id])
+
+
   end
 
   def create
     @prop = Prop.new(prop_params)
+    @user = User.find(session[:user_id])
 
     @answer = Answer.new
 
@@ -34,7 +40,7 @@ class PropsController < ApplicationController
     @user = User.find(session[:user_id])
 
     @prop = Prop.find(params[:id])
-    @answer = Answer.find(session[:user_id])
+    @answer = Answer.find(params[:id])
 
     if @prop.update(prop_params)
       redirect_to @prop
@@ -68,5 +74,5 @@ end
 
 private
   def prop_params
-    params.require(:prop).permit(:title, :text, :choice)
+    params.require(:prop).permit(:title, :text, :choice, :user_id, :id)
   end
