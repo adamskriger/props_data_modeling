@@ -32,7 +32,7 @@ group :assets do
   gem 'coffee-rails'
   gem 'uglifier'
 
-  gem 'compass-h5bp'
+  # gem 'compass-h5bp'
 end
 
 gem 'jquery-rails'
@@ -59,7 +59,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
-  gem 'compass-rails'
+  # gem 'compass-rails'
 
 end
 
