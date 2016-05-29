@@ -36,16 +36,35 @@ class PropsController < ApplicationController
 
   end
 
-  def update
-    @user = User.find(session[:user_id])
-    @prop = Prop.find(params[:id])
-    @answer = Answer.find(params[:id])
+#   def update
+#     @user = User.find(session[:user_id])
+#     @prop = Prop.find(params[:id])
+#     @answer = Answer.find(params[:id])
+#
+#      @prop.update(prop_params)
+#      if @user.answers?
+#      score_change = @answer.choice == @prop.choice ? 7 : -7
+#      User.update_all("score = score + #{score_change}")
+#    end
+# end
 
-    @prop.update(prop_params)
-    score_change = @answer.choice == @prop.choice ? 7 : -7
-    User.update_all("score = score + #{score_change}")
-  end
 
+def update
+     @user = User.find(session[:user_id])
+     @prop = Prop.find(params[:id])
+     @answer = Answer.find(params[:id])
+     @prop.update(prop_params)
+
+     if Prop.find(params[:id]).choice != 'C'
+    User.all.map
+       if @answer.choice == @prop.choice && @answer.prop_id == @prop.id
+          then
+            User.find(answer.user_id).score += ‘5’
+          end
+       end
+     
+
+end
 
   def destroy
     @prop = Prop.find(params[:id])

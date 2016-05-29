@@ -16,9 +16,14 @@ class AnswersController < ApplicationController
 
   def create
     @prop = Prop.find(params[:prop_id])
+    puts @prop.inspect
 
     @user = User.find(session[:user_id])
+    puts @user.inspect
     @answer = @user.answers.create(answer_params)
+    @answer.user_id = @user.id
+    puts @answer.inspect
+
     if @answer.save
 
     redirect_to root_path
