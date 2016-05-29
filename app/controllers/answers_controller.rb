@@ -26,18 +26,6 @@ class AnswersController < ApplicationController
     else
     render 'new'
     end
-
-    if @answer.choice == @prop.choice
-      puts "hello"
-      @user.score += 5
-      @user.save
-    else
-      @user.score -= 5
-      @user.save
-
-    end
-
-
   end
 
 
