@@ -48,23 +48,20 @@ class PropsController < ApplicationController
 #    end
 # end
 
-
-def update
-     @user = User.find(session[:user_id])
-     @prop = Prop.find(params[:id])
+  def update
      @answer = Answer.find(params[:id])
+     @user = User.find(@answer.user_id)
+     @prop = Prop.find(params[:id])
      @prop.update(prop_params)
 
-     if Prop.find(params[:id]).choice != 'C'
-    User.all.map
-       if @answer.choice == @prop.choice && @answer.prop_id == @prop.id
-          then
-            User.find(answer.user_id).score += ‘5’
-          end
-       end
-     
+    if @answer.choice == @prop.choice
+      @user.score  += 5
+    else
+       @user.score -= 5
+    end
+    @user.save
+  end
 
-end
 
   def destroy
     @prop = Prop.find(params[:id])
