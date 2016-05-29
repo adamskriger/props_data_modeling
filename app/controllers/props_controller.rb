@@ -54,13 +54,14 @@ class PropsController < ApplicationController
      @prop = Prop.find(@answer.prop_id)
      @prop.update(prop_params)
 
-       Answer.all.map
-        if @answer.choice.to_s == @prop.choice.to_s
+       Answer.all.each
+        if (@answer.choice.to_s == @prop.choice.to_s)
           @user.score  += 5
+          @user.save
         else
            @user.score -= 5
+           @user.save
         end
-        @user.save
 
   end
 
