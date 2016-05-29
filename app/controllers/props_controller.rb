@@ -51,15 +51,17 @@ class PropsController < ApplicationController
   def update
      @answer = Answer.find(params[:id])
      @user = User.find(@answer.user_id)
-     @prop = Prop.find(params[:id])
+     @prop = Prop.find(@answer.prop_id)
      @prop.update(prop_params)
 
-    if @answer.choice == @prop.choice
-      @user.score  += 5
-    else
-       @user.score -= 5
-    end
-    @user.save
+       Answer.all.map
+        if @answer.choice.to_s == @prop.choice.to_s
+          @user.score  += 5
+        else
+           @user.score -= 5
+        end
+        @user.save
+
   end
 
 
