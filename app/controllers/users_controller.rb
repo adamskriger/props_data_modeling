@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  attr_accessor :user, :answer, :choice, :prop_id, :prop, :answer_id, :id
+
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :require_admin, only: [:index]
   # GET /users
@@ -10,6 +12,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @prop = Prop.all
   end
 
   # GET /users/new

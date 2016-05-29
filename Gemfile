@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'bootstrap', '~> 4.0.0.alpha3'
 
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
@@ -27,13 +26,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-group :assets do
   gem 'sass-rails'
-  gem 'coffee-rails'
-  gem 'uglifier'
-
-  # gem 'compass-h5bp'
-end
 
 gem 'jquery-rails'
 gem 'html5-rails'

@@ -1,3 +1,5 @@
+<div class="content">
+<div class="content-padded"> 
 <p>
   <strong>What's the Propisition?</strong>
   <%= @prop.title %>
@@ -11,17 +13,24 @@
 <p>
 <%= @prop.choice %>
 </p>
+</div>
+
+<button class="btn btn-positive btn-block"><%= link_to 'Take a position', new_prop_answer_path(@prop)  %></button>
+
+<button class="btn btn-primary btn-block btn-outlined">  <%= link_to 'Back to All Props', props_path  %>
+</button>
+<button class="btn btn-negative btn-block btn-outlined">  <%= link_to 'Edit', edit_prop_path(@prop)  %>
+</button>
 
 
 
-<h2>Comments</h2>
-  <div><%= render @prop.comments %></div>
+
+<br>
+  <h3>Comments</h3>
+    <div><%= render @prop.comments %></div>
 
 
-  <h2>Add a Comment</h2>
+    <h4>Add a Comment</h4>
 
-  <%= render 'comments/form' %>
-  <%= link_to 'Edit', edit_prop_path(@prop)  %>
-  <%= link_to 'Back to All Props', props_path  %>
-
-  <li><%= link_to 'Assign an answer', new_prop_answer_path(@prop)  %></li>
+    <%= render 'comments/form' %>
+ </div>

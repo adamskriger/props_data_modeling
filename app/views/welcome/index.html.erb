@@ -1,8 +1,47 @@
-<h1>Hello and Welcome to Props</h1>
-
-<p>Predict the outcome of real life situations and earn PropDollars when you're right. Play against your friends, colleagues and other Proppers on the site!</p>
 
 
-<div><%= link_to 'All Props', controller: 'props'  %></div>
 
-<div><%= link_to 'Create a Prop', new_prop_path  %></div>
+<div class="content">
+
+
+
+
+      <h1 class="content-padded opener">Welcome to a Whole New Betting Experience</h1>
+
+
+
+
+
+
+
+      <p class="content-padded">Predict the outcome of real life situations and earn points when you're right. </p>
+
+      <p class="content-padded">Play against your friends and colleagues and become the master of your domain!</p>
+
+      <div class="card">
+        <ul class="table-view">
+          <li class="table-view-cell">
+              <strong><%= link_to 'View All Props', controller: 'props'  %></strong>
+          </li>
+          <% if logged_in? and current_user.admin %>
+
+          <li class="table-view-cell">
+
+              <strong><%= link_to 'Create a Prop', new_prop_path  %></strong>
+
+          </li>
+
+          <li class="table-view-cell">
+              <strong><%= link_to 'View All Users', users_path  %></strong>
+
+          </li>
+
+          <% end %>
+
+
+        </ul>
+      </div>
+
+      <%= image_tag("chance.png", :alt => "logo") %>
+
+    </div>

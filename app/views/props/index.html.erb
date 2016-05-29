@@ -1,19 +1,25 @@
 
+<div class="content">
 
 <% @props.each do |prop| %>
 
-<div>
-  <h3><%= link_to prop.title, prop %></h3>
-  <p><%= prop.text %></p>
-    <% if logged_in? and current_user.admin %>
-      <div class="admin-functions">
-        <h3><%= link_to 'Edit', edit_prop_path(prop) %></h3>
-        <h3><%= link_to 'Delete', prop_path(prop),
-                                  method: :delete,
-                                  data: ( 'Are you sure?' ) %></h3>
-      </div>
-    <% end %>
+<ul class="table-view">
+  <li class="table-view-cell media">
+      <img class="media-object pull-left" src="http://placehold.it/42x42">
+      <div class="media-body">
+        <%= link_to prop.title, prop %>
+        <p><%= prop.text %></p>
+            <% if logged_in? and current_user.admin %>
+                <h4><%= link_to 'Edit', edit_prop_path(prop) %></h4>
+                <h4><%= link_to 'Delete', prop_path(prop),
+                                          method: :delete,
+                                          data: ( 'Are you sure?' ) %></h4>
 
-</div>
+              <% end %>
+        </div>
+  </li>
+</ul>
 
 <% end %>
+
+</div>

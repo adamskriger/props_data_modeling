@@ -1,27 +1,45 @@
+<div class="content">
+
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class="content-padded">
   <strong>Username:</strong>
   <%= @user.username %>
 </p>
 
-<p>
+<p class="content-padded">
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
 
-<p>
+<p class="content-padded">
   <strong>Score:</strong>
   <%= @user.score %>
 </p>
 
-<div>
-<h4><%= @user.username%>'s Props</h4>
+<h4 class="content-padded"><%= @user.username%>'s Props</h4>
 
-<%= render 'props/prop', obj: @user.props %></h4>
 
-</div>
+
+
+<% @prop.each do |prop| %>
+
+<ul class="table-view">
+  <li class="table-view-cell media">
+      <img class="media-object pull-left" src="http://placehold.it/42x42">
+      <div class="media-body">
+        <%= link_to prop.title, prop %>
+        <p><%= prop.text %></p>
+        </div>
+  </li>
+</ul>
+
+<% end %>
+
+
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+
+</div>

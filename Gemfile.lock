@@ -37,14 +37,9 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
-    autoprefixer-rails (6.3.6.1)
-      execjs
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap (4.0.0.alpha3)
-      autoprefixer-rails (>= 6.0.3)
-      sass (>= 3.4.19)
     builder (3.2.2)
     byebug (9.0.4)
     coffee-rails (4.1.1)
@@ -146,8 +141,6 @@ GEM
       coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (3.0.0)
-      execjs (>= 0.3.0, < 3)
     web-console (2.3.0)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -159,9 +152,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
-  bootstrap (~> 4.0.0.alpha3)
   byebug
-  coffee-rails
   html5-rails
   jbuilder (~> 2.0)
   jquery-rails
@@ -172,7 +163,6 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   spring
   turbolinks
-  uglifier
   web-console (~> 2.0)
 
 BUNDLED WITH
