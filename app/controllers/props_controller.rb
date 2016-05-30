@@ -3,15 +3,19 @@ class PropsController < ApplicationController
 
   def index
     @props=Prop.all
+    @user = User.find(session[:user_id])
+
   end
 
   def show
     @prop = Prop.find(params[:id])
+    @user = User.find(session[:user_id])
+
   end
 
   def new
     @prop = Prop.new
-    @user = User.find(session[:user_id])
+    @user = User.any
 
   end
 

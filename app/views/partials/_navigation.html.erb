@@ -1,21 +1,26 @@
+<h1 class="title"><%= link_to 'Props', root_path  %></h1>
 
+ <% if logged_in? %>
+   <%= link_to(user_path(@user)) do %>
+     <button class="btn pull-left">
+       <div><%= current_user.username.capitalize %></div>
+     </button>
+   <% end %>
+   <%= link_to(logout_path, method: :delete) do %>
+     <button class="btn pull-right">
+       Log Out
+     </button>
+   <% end %>
 
-  <h1 class="title"><%= link_to 'Props', root_path  %></h1>
-
-  <% if logged_in? %>
-
-  <button class="btn pull-left">
-    <div><%= "Admin" if current_user.admin? %></div>
-
-    <%= link_to 'log out', logout_path, method: :delete, url: root_path  %>
-
-  </button>
-
-    <% else %>
-    <button class="btn pull-right">
-      <a class="control-item"><%= link_to 'log in', login_path  %></a>
-    </button>
-    <button class="btn pull-left">
-      <a class="control-item"><%= link_to 'Sign Up', new_user_path  %></a>
-  </button>
-  <% end %>
+   <% else %>
+     <%= link_to(login_path) do %>
+       <button class="btn pull-left">
+         Login
+       </button>
+     <% end %>
+     <%= link_to(new_user_path) do %>
+       <button class="btn pull-right">
+         Sign Up
+       </button>
+     <% end %>
+ <% end %>

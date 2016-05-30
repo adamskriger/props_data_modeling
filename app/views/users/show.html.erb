@@ -4,7 +4,7 @@
 
 <p class="content-padded">
   <strong>Username:</strong>
-  <%= @user.username %>
+  <%= @user.username.capitalize %>
 </p>
 
 <p class="content-padded">
@@ -17,7 +17,7 @@
   <%= @user.score %>
 </p>
 
-<h4 class="content-padded"><%= @user.username%>'s Props</h4>
+<h4 class="content-padded"><%= @user.username.capitalize%>'s Props</h4>
 
 
 
@@ -39,7 +39,6 @@
 
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Edit', edit_user_path(@user) %>
 
 </div>
