@@ -38,7 +38,7 @@ class PropsController < ApplicationController
 
   def update
      @answer = Answer.find(params[:id])
-     @user = User.find(@answer.user_id)
+     @user = User.all
      @prop = Prop.find(@answer.prop_id)
      @prop.update(prop_params)
 
