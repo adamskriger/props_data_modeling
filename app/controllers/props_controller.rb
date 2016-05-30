@@ -16,12 +16,8 @@ class PropsController < ApplicationController
   end
 
   def edit
-    @answer = Answer.find(params[:id])
-
     @prop = Prop.find(params[:id])
-    @user = User.find(@answer.user_id)
-
-
+    @user = User.find(1)
   end
 
   def create
@@ -31,30 +27,30 @@ class PropsController < ApplicationController
     @answer = Answer.new
 
     if @prop.save
-    redirect_to @prop
+      redirect_to @prop
     else
-    render 'new'
+      render 'new'
     end
 
   end
 
   def update
+      @prop = Prop.find(params[:id])
+      @user = User.find(1) #hardcoded to be admin
+      @prop.update(prop_params)
 
-     @prop = Prop.find(params[:id])
-     @prop.update(prop_params)
-
-       UserAnswer.all.each
-        @useranswer = UserAnswer.find(params[:id])
-        @answer = Answer.find(@useranswer.answer_id)
-        @user = User.find(@useranswer.user_id)
-
-        if (@answer.choice.to_s == @prop.choice.to_s)
+      Answer.all.each  do |answer|
+        argument = answer.user_id
+        if (answer.choice == @prop.choice && answer.prop_id == @prop.id )
+          @user = User.find(argument)
           @user.score  += 5
           @user.save
         else
-           @user.score -= 5
-           @user.save
+          @user = User.find(argument)
+          @user.score  -= 5
+          @user.save
         end
+      end
 
   end
 
