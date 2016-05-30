@@ -28,25 +28,19 @@ ActiveRecord::Schema.define(version: 20160528205746) do
   create_table "comments", force: :cascade do |t|
     t.string   "commenter"
     t.text     "body"
-    t.integer  "prop_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "comments", ["prop_id"], name: "index_comments_on_prop_id", using: :btree
-
   create_table "props", force: :cascade do |t|
     t.string   "title"
     t.text     "text"
-    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "choice"
     t.string   "answer"
     t.integer  "answerId"
   end
-
-  add_index "props", ["user_id"], name: "index_props_on_user_id", using: :btree
 
   create_table "user_answers", force: :cascade do |t|
     t.integer  "user_id"
@@ -72,14 +66,6 @@ ActiveRecord::Schema.define(version: 20160528205746) do
   add_index "users", ["answer_id"], name: "index_users_on_answer_id", using: :btree
   add_index "users", ["prop_id"], name: "index_users_on_prop_id", using: :btree
 
-  create_table "wins", force: :cascade do |t|
-    t.string   "correctAnswer"
-    t.integer  "user_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
-  add_index "wins", ["user_id"], name: "index_wins_on_user_id", using: :btree
-
   add_foreign_key "users", "answers"
+  add_foreign_key "users", "props"
 end
