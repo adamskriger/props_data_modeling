@@ -36,18 +36,6 @@ class PropsController < ApplicationController
 
   end
 
-#   def update
-#     @user = User.find(session[:user_id])
-#     @prop = Prop.find(params[:id])
-#     @answer = Answer.find(params[:id])
-#
-#      @prop.update(prop_params)
-#      if @user.answers?
-#      score_change = @answer.choice == @prop.choice ? 7 : -7
-#      User.update_all("score = score + #{score_change}")
-#    end
-# end
-
   def update
      @answer = Answer.find(params[:id])
      @user = User.find(@answer.user_id)
