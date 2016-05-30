@@ -16,8 +16,10 @@ class PropsController < ApplicationController
   end
 
   def edit
+    @answer = Answer.find(params[:id])
+
     @prop = Prop.find(params[:id])
-    @user = User.find(session[:user_id])
+    @user = User.find(@answer.user_id)
 
 
   end
@@ -37,12 +39,15 @@ class PropsController < ApplicationController
   end
 
   def update
-     @answer = Answer.find(params[:id])
-     @user = User.find(@answer.user_id)
-     @prop = Prop.find(@answer.prop_id)
+
+     @prop = Prop.find(params[:id])
      @prop.update(prop_params)
 
-       Answer.all.map
+       UserAnswer.all.each
+        @useranswer = UserAnswer.find(params[:id])
+        @answer = Answer.find(@useranswer.answer_id)
+        @user = User.find(@useranswer.user_id)
+
         if (@answer.choice.to_s == @prop.choice.to_s)
           @user.score  += 5
           @user.save

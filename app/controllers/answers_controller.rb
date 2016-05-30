@@ -25,7 +25,7 @@ class AnswersController < ApplicationController
     puts @answer.inspect
 
     if @answer.save
-
+      puts "Saved: " + @answer.choice
     redirect_to root_path
 
     else
