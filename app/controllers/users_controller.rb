@@ -7,12 +7,16 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+    @user = User.find(session[:user_id])
+
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
     @prop = Prop.all
+    @user = User.find(session[:user_id])
+
   end
 
   # GET /users/new
