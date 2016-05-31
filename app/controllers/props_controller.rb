@@ -57,7 +57,7 @@ class PropsController < ApplicationController
           @user.save
         end
       end
-
+      redirect_to users_path
   end
 
 
