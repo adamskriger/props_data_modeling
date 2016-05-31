@@ -41,25 +41,23 @@ class PropsController < ApplicationController
   end
 
   def update
-      @prop = Prop.find(params[:id])
-      # @user = User.find(1) #hardcoded to be admin
-      @prop.update(prop_params)
+        @prop = Prop.find(params[:id])
+        # @user = User.find(1) #hardcoded to be admin
+        @prop.update(prop_params)
 
-      Answer.all.each  do |answer|
-        argument = answer.user_id
-        if (answer.choice == @prop.choice && answer.prop_id == @prop.id )
+        Answer.all.each  do |answer|
+          argument = answer.user_id
           @user = User.find(argument)
-          @user.score  += 5
-          @user.save
-        else
-          @user = User.find(argument)
-          @user.score  -= 5
-          @user.save
+          if (answer.prop_id == @prop.id && answer.choice == @prop.choice && @user.id = answer.user_id)
+            @user.score  += 5
+            @user.save
+          else
+            @user.score  -= 5
+            @user.save
+          end
         end
-      end
-      redirect_to users_path
-  end
-
+        redirect_to users_path
+    end
 
   def destroy
     @prop = Prop.find(params[:id])
