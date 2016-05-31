@@ -17,6 +17,42 @@
   <%= @user.score %>
 </p>
 
+
+<% if logged_in? and current_user.admin %>
+
+<div class="card">
+  <ul class="table-view">
+    <li class="table-view-cell">
+        <strong><%= link_to 'View All Props', controller: 'props'  %></strong>
+    </li>
+
+    <li class="table-view-cell">
+
+        <strong><%= link_to 'Create a Prop', new_prop_path  %></strong>
+
+    </li>
+
+    <li class="table-view-cell">
+        <strong><%= link_to 'View All Users', users_path  %></strong>
+
+    </li>
+
+
+
+  </ul>
+</div>
+
+<div class="card">
+  <ul class="table-view">
+    <li class="table-view-cell">
+        <strong><%= link_to 'Edit My Profile', edit_user_path(@user) %>
+</strong>
+    </li>
+
+</div>
+<% end %>
+
+
 <h4 class="content-padded"><%= @user.username.capitalize%>'s Props</h4>
 
 
@@ -39,6 +75,7 @@
 
 
 
-<%= link_to 'Edit', edit_user_path(@user) %>
+
+
 
 </div>
