@@ -1,9 +1,9 @@
 class PropsController < ApplicationController
   attr_accessor :user, :answer, :choice, :prop_id, :prop, :answer_id, :id
+  before_action :require_login, only: [:show]
 
   def index
     @props=Prop.all
-    @user = User.find(session[:user_id])
 
   end
 
@@ -68,6 +68,13 @@ class PropsController < ApplicationController
 
   def select
     @prop = Prop.find(params[:choice])
+  end
+
+  def require_login
+    if !logged_in?
+      flash[:danger]="You must login perform that action"
+      render 'users/pleaselogin'
+    end
   end
 
 end
