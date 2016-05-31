@@ -42,7 +42,7 @@ class PropsController < ApplicationController
 
   def update
       @prop = Prop.find(params[:id])
-      @user = User.find(1) #hardcoded to be admin
+      # @user = User.find(1) #hardcoded to be admin
       @prop.update(prop_params)
 
       Answer.all.each  do |answer|
