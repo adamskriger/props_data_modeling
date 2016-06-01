@@ -1,10 +1,8 @@
 
 
-
 <div class="content allpropsul">
   <% if logged_in? and current_user.admin %>
 
-      <div class="card">
         <ul class="table-view">
 
           <li class="table-view-cell">
@@ -19,7 +17,6 @@
           </li>
 
         </ul>
-      </div>
       <% end %>
 
       <% @props.each do |prop| %>
