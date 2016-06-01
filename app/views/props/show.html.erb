@@ -3,7 +3,7 @@
 
   <div class="bar bar-standard bar-header-secondary">
     <% if current_user.admin? %>
-    <button class="btn btn-block">  <%= link_to 'Edit', edit_prop_path(@prop)  %></button>
+    <button class="btn btn-block edit">  <%= link_to 'Edit', edit_prop_path(@prop)  %></button>
     <% end %>
   </div>
 <br>
@@ -30,7 +30,7 @@
 <!-- <button class="btn btn-primary btn-block btn-outlined">  <%= link_to 'Back to All Props', props_path  %>
 </button> -->
 <div class="bar bar-standard bar-footer-secondary">
-  <button class="btn btn-block">
+  <button class="btn btn-block place">
     <% if logged_in? %>
         <%= link_to 'Place a Bet', new_prop_answer_path(@prop)  %>
       <% else %>
