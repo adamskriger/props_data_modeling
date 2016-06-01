@@ -24,6 +24,7 @@
 <button class="btn btn-negative btn-block btn-outlined">  <%= link_to 'Edit', edit_prop_path(@prop)  %>
 </button>
 
+<div class="bar bar-standard bar-footer-secondary">
 <button class="btn btn-positive btn-block betbutton">
   <% if logged_in? %>
       <%= link_to 'Place a Bet', new_prop_answer_path(@prop)  %>
@@ -31,7 +32,7 @@
     <%= link_to 'Please log in to place a bet', login_path  %>
   <% end %>
 </button>
-
+</div>
     <!-- <br>
       <h3>Comments</h3>
         <div><%= render @prop.comments %></div>
