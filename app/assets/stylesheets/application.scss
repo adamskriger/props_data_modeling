@@ -280,7 +280,7 @@
  }
 
  a {
-   color: #428bca;
+   color: black;
    text-decoration: none;
 
    -webkit-tap-highlight-color: transparent;
@@ -384,9 +384,18 @@
 
  p {
    margin-top: 0;
-   margin-bottom: 10px;
-   font-size: 14px;
+   margin-bottom: 5px !important;
+   font-weight: lighter;
+   font-size: 13px;
    color: #777;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   max-width: 75ch;
+ }
+
+ .editdelete {
+   font-size: 10px;
  }
 
  .btn {
