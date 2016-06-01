@@ -1,9 +1,12 @@
-<h1 class="title"><%= link_to 'Props', root_path  %></h1>
+<h1 class="title"><%= link_to 'Bets', root_path  %></h1>
+
+
+
 
  <% if logged_in? %>
-   <%= link_to(user_path(@user)) do %>
+   <%= link_to(request.env["HTTP_REFERER"]) do %>
      <button class="btn pull-left">
-       <div><%= current_user.username.capitalize %></div>
+       <div>Back</div>
      </button>
    <% end %>
    <%= link_to(logout_path, method: :delete) do %>
@@ -22,5 +25,6 @@
        <button class="btn pull-right">
          Sign Up
        </button>
+
      <% end %>
  <% end %>
