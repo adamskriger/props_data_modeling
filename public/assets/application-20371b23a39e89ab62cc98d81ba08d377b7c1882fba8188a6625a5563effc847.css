@@ -1,0 +1,1785 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+/*!
+ * =====================================================
+ * Ratchet v2.0.2 (http://goratchet.com)
+ * Copyright 2014 Connor Sears
+ * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
+ *
+ * v2.0.2 designed by @connors.
+ * =====================================================
+ */
+@icon {
+  src: url(/assets/ratchicons-92c240fdfea116994f381765f663a658891f352ecf5ada6669f3ee1247e2fe6c.eot);
+  src: url(/assets/ratchicons-92c240fdfea116994f381765f663a658891f352ecf5ada6669f3ee1247e2fe6c.eot) format("embedded-opentype"), url(/assets/ratchicons-6b7f772f2749595a32af119a436d66a5c26b3781f90337b96cfe4ce434dd26f5.woff) format("woff"), url(/assets/ratchicons-c4d0e3d754cbd53ae84d3ab3e5234d6083b03e70acbfe1e81cf273fefd91fbbe.ttf) format("truetype"), url(/assets/ratchicons-f8cfcfe0f3b9f254b23594d617358176540148fd376cce6e979fa2dc8764b488.svg) format("svg");
+}
+/* line 41, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.opener {
+  text-align: center;
+}
+
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/* line 45, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 51, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+body {
+  margin: 0;
+}
+
+/* line 55, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 70, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* line 78, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 83, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* line 88, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+a {
+  background: transparent;
+}
+
+/* line 92, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* line 97, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 101, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 106, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 110, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+h1 {
+  margin: .67em 0;
+  font-size: 2em;
+}
+
+/* line 115, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+mark {
+  color: #000;
+  background: #ff0;
+}
+
+/* line 120, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 124, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+/* line 132, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+sup {
+  top: -.5em;
+}
+
+/* line 136, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+sub {
+  bottom: -.25em;
+}
+
+/* line 140, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+img {
+  border: 0;
+}
+
+/* line 144, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 148, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/* line 152, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+hr {
+  height: 0;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 158, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+pre {
+  overflow: auto;
+}
+
+/* line 162, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* line 170, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+/* line 180, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+button {
+  overflow: visible;
+}
+
+/* line 184, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 189, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 197, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/* line 202, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* line 208, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+input {
+  line-height: normal;
+}
+
+/* line 212, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 218, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* line 223, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+input[type="search"] {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-appearance: textfield;
+}
+
+/* line 230, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 235, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+fieldset {
+  padding: .35em .625em .75em;
+  margin: 0 2px;
+  border: 1px solid #c0c0c0;
+}
+
+/* line 241, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+legend {
+  padding: 0;
+  border: 0;
+}
+
+/* line 246, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 250, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* line 254, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+/* line 259, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+td,
+th {
+  padding: 0;
+}
+
+/* line 264, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 270, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+body {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 21px;
+  color: #000;
+  background-color: #fff;
+}
+
+/* line 283, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+a {
+  color: black;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 289, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+a:active {
+  color: #3071a9;
+}
+
+/* line 293, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  background-color: #fff;
+}
+
+/* line 304, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.content > * {
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* line 310, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar-nav ~ .content {
+  padding-top: 44px;
+}
+
+/* line 314, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar-header-secondary ~ .content {
+  padding-top: 88px;
+}
+
+/* line 318, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar-footer ~ .content {
+  padding-bottom: 44px;
+}
+
+/* line 322, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar-footer-secondary ~ .content {
+  padding-bottom: 88px;
+}
+
+/* line 326, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar-tab ~ .content {
+  padding-bottom: 50px;
+}
+
+/* line 330, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar-footer-secondary-tab ~ .content {
+  padding-bottom: 94px;
+}
+
+/* line 334, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.content-padded {
+  margin: 10px;
+}
+
+/* line 338, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.pull-left {
+  float: left;
+}
+
+/* line 342, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.pull-right {
+  float: right;
+}
+
+/* line 346, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: " ";
+}
+
+/* line 350, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 354, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+/* line 360, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+h1, .h1 {
+  font-size: 36px;
+}
+
+/* line 364, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+h2, .h2 {
+  font-size: 30px;
+}
+
+/* line 368, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+h3, .h3 {
+  font-size: 24px;
+}
+
+/* line 372, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+h4, .h4 {
+  font-size: 18px;
+}
+
+/* line 376, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+h5, .h5 {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* line 381, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+h6, .h6 {
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+/* line 386, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+p {
+  margin-top: 0;
+  margin-bottom: 5px !important;
+  font-weight: lighter;
+  font-size: 13px;
+  color: #777;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 75ch;
+}
+
+/* line 398, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.editdelete {
+  font-size: 10px;
+}
+
+/* line 402, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 6px 8px 7px;
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  color: #333;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* line 419, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.btn:active, .btn.active {
+  color: inherit;
+  background-color: #ccc;
+}
+
+/* line 423, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.btn:disabled, .btn.disabled {
+  opacity: .6;
+}
+
+/* line 427, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.btn-primary {
+  color: #fff;
+  background-color: #428bca;
+  border: 1px solid #428bca;
+}
+
+/* line 432, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.btn-primary:active, .btn-primary.active {
+  color: #fff;
+  background-color: #3071a9;
+  border: 1px solid #3071a9;
+}
+
+/* line 438, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.btn-positive {
+  color: #fff;
+  background-color: #5cb85c;
+  border: 1px solid #5cb85c;
+}
+
+/* line 443, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.btn-positive:active, .btn-positive.active {
+  color: #fff;
+  background-color: #449d44;
+  border: 1px solid #449d44;
+}
+
+/* line 449, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.btn-negative {
+  color: #fff;
+  background-color: #d9534f;
+  border: 1px solid #d9534f;
+}
+
+/* line 454, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.btn-negative:active, .btn-negative.active {
+  color: #fff;
+  background-color: #c9302c;
+  border: 1px solid #c9302c;
+}
+
+/* line 460, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.btn-outlined {
+  background-color: transparent;
+}
+
+/* line 463, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.btn-outlined.btn-primary {
+  color: #428bca;
+}
+
+/* line 466, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.btn-outlined.btn-positive {
+  color: #5cb85c;
+}
+
+/* line 469, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.btn-outlined.btn-negative {
+  color: #d9534f;
+}
+
+/* line 472, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.btn-outlined.btn-primary:active, .btn-outlined.btn-positive:active, .btn-outlined.btn-negative:active {
+  color: #fff;
+}
+
+/* line 476, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.btn-link {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  color: #428bca;
+  background-color: transparent;
+  border: 0;
+}
+
+/* line 483, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.btn-link:active, .btn-link.active {
+  color: #3071a9;
+  background-color: transparent;
+}
+
+/* line 488, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.btn-block {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* line 496, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  width: 100%;
+}
+
+/* line 502, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.btn .badge {
+  margin: -2px -4px -2px 4px;
+  font-size: 12px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* line 508, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.btn .badge-inverted,
+.btn:active .badge-inverted {
+  background-color: transparent;
+}
+
+/* line 513, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.btn-primary:active .badge-inverted,
+.btn-positive:active .badge-inverted,
+.btn-negative:active .badge-inverted {
+  color: #fff;
+}
+
+/* line 519, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.btn-block .badge {
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+}
+
+/* line 525, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.btn .icon {
+  font-size: inherit;
+}
+
+/* line 529, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  height: 44px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* line 544, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar-header-secondary {
+  top: 44px;
+}
+
+/* line 548, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar-footer {
+  bottom: 0;
+}
+
+/* line 552, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar-footer-secondary {
+  bottom: 44px;
+}
+
+/* line 556, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar-footer-secondary-tab {
+  bottom: 50px;
+}
+
+/* line 560, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar-footer,
+.bar-footer-secondary,
+.bar-footer-secondary-tab {
+  border-top: 1px solid #ddd;
+  border-bottom: 0;
+}
+
+/* line 567, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar-nav {
+  top: 0;
+}
+
+/* line 571, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.title {
+  position: absolute;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0 -10px;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 44px;
+  color: #000;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* line 585, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.title a {
+  color: inherit;
+}
+
+/* line 589, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar-tab {
+  bottom: 0;
+  display: table;
+  width: 100%;
+  height: 50px;
+  padding: 0;
+  table-layout: fixed;
+  border-top: 1px solid #ddd;
+  border-bottom: 0;
+}
+
+/* line 599, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar-tab .tab-item {
+  display: table-cell;
+  width: 1%;
+  height: 50px;
+  color: #929292;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* line 607, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar-tab .tab-item.active, .bar-tab .tab-item:active {
+  color: #428bca;
+}
+
+/* line 610, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar-tab .tab-item .icon {
+  top: 3px;
+  width: 24px;
+  height: 24px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* line 617, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar-tab .tab-item .icon ~ .tab-label {
+  display: block;
+  font-size: 11px;
+}
+
+/* line 622, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar .btn {
+  position: relative;
+  top: 7px;
+  z-index: 20;
+  padding: 6px 12px 7px;
+  margin-top: 0;
+  font-weight: 400;
+}
+
+/* line 630, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar .btn.pull-right {
+  margin-left: 10px;
+}
+
+/* line 633, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar .btn.pull-left {
+  margin-right: 10px;
+}
+
+/* line 637, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar .btn-link {
+  top: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 44px;
+  color: #428bca;
+  border: 0;
+}
+
+/* line 645, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar .btn-link:active, .bar .btn-link.active {
+  color: #3071a9;
+}
+
+/* line 649, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar .btn-block {
+  top: 6px;
+  padding: 7px 0;
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+/* line 656, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar .btn-nav.pull-left {
+  margin-left: -5px;
+}
+
+/* line 659, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar .btn-nav.pull-left .icon-left-nav {
+  margin-right: -3px;
+}
+
+/* line 662, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar .btn-nav.pull-right {
+  margin-right: -5px;
+}
+
+/* line 665, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar .btn-nav.pull-right .icon-right-nav {
+  margin-left: -3px;
+}
+
+/* line 669, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar .icon {
+  position: relative;
+  z-index: 20;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 24px;
+}
+
+/* line 676, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar .btn .icon {
+  top: 3px;
+  padding: 0;
+}
+
+/* line 680, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar .title .icon {
+  padding: 0;
+}
+
+/* line 683, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar .title .icon.icon-caret {
+  top: 4px;
+  margin-left: -5px;
+}
+
+/* line 688, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar input[type="search"] {
+  height: 29px;
+  margin: 6px 0;
+}
+
+/* line 693, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.bar .segmented-control {
+  top: 7px;
+  margin: 0 auto;
+}
+
+/* line 698, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.badge {
+  display: inline-block;
+  padding: 2px 9px 3px;
+  font-size: 12px;
+  line-height: 1;
+  color: #333;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 100px;
+}
+
+/* line 707, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.badge.badge-inverted {
+  padding: 0 5px 0 0;
+  background-color: transparent;
+}
+
+/* line 712, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.badge-primary {
+  color: #fff;
+  background-color: #428bca;
+}
+
+/* line 716, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.badge-primary.badge-inverted {
+  color: #428bca;
+}
+
+/* line 720, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.badge-positive {
+  color: #fff;
+  background-color: #5cb85c;
+}
+
+/* line 724, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.badge-positive.badge-inverted {
+  color: #5cb85c;
+}
+
+/* line 728, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.badge-negative {
+  color: #fff;
+  background-color: #d9534f;
+}
+
+/* line 732, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.badge-negative.badge-inverted {
+  color: #d9534f;
+}
+
+/* line 736, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.card {
+  margin: 10px;
+  overflow: hidden;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* line 744, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.card .table-view {
+  margin-bottom: 0;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+/* line 749, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.card .table-view .table-view-divider:first-child {
+  top: 0;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+/* line 754, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.card .table-view .table-view-divider:last-child {
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+/* line 759, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.card .table-view-cell:last-child {
+  border-bottom: 0;
+}
+
+/* line 763, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.table-view {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 15px;
+  list-style: none;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+/* line 773, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.table-view-cell {
+  position: relative;
+  padding: 11px 65px 11px 15px;
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+}
+
+/* line 779, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.table-view-cell:last-child {
+  border-bottom: 0;
+}
+
+/* line 782, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.table-view-cell > a:not(.btn) {
+  position: relative;
+  display: block;
+  padding: inherit;
+  margin: -11px -65px -11px -15px;
+  overflow: hidden;
+  color: inherit;
+}
+
+/* line 790, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.table-view-cell > a:not(.btn):active {
+  background-color: #eee;
+}
+
+/* line 793, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.table-view-cell p {
+  margin-bottom: 0;
+}
+
+/* line 797, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.table-view-divider {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 15px;
+  margin-top: -1px;
+  margin-left: 0;
+  font-weight: 500;
+  color: #999;
+  background-color: #fafafa;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+/* line 810, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.table-view .media,
+.table-view .media-body {
+  overflow: hidden;
+}
+
+/* line 815, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.table-view .media-object.pull-left {
+  margin-right: 10px;
+}
+
+/* line 818, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.table-view .media-object.pull-right {
+  margin-left: 10px;
+}
+
+/* line 822, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.table-view-cell > .btn,
+.table-view-cell > .badge,
+.table-view-cell > .toggle,
+.table-view-cell > a > .btn,
+.table-view-cell > a > .badge,
+.table-view-cell > a > .toggle {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* line 835, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.table-view-cell .navigate-left > .btn,
+.table-view-cell .navigate-left > .badge,
+.table-view-cell .navigate-left > .toggle,
+.table-view-cell .navigate-right > .btn,
+.table-view-cell .navigate-right > .badge,
+.table-view-cell .navigate-right > .toggle,
+.table-view-cell .push-left > .btn,
+.table-view-cell .push-left > .badge,
+.table-view-cell .push-left > .toggle,
+.table-view-cell .push-right > .btn,
+.table-view-cell .push-right > .badge,
+.table-view-cell .push-right > .toggle,
+.table-view-cell > a .navigate-left > .btn,
+.table-view-cell > a .navigate-left > .badge,
+.table-view-cell > a .navigate-left > .toggle,
+.table-view-cell > a .navigate-right > .btn,
+.table-view-cell > a .navigate-right > .badge,
+.table-view-cell > a .navigate-right > .toggle,
+.table-view-cell > a .push-left > .btn,
+.table-view-cell > a .push-left > .badge,
+.table-view-cell > a .push-left > .toggle,
+.table-view-cell > a .push-right > .btn,
+.table-view-cell > a .push-right > .badge,
+.table-view-cell > a .push-right > .toggle {
+  right: 35px;
+}
+
+/* line 862, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.content > .table-view:first-child {
+  margin-top: 15px;
+}
+
+/* line 866, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+input,
+textarea,
+button,
+select {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+/* line 874, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+select,
+textarea,
+input[type="text"],
+input[type="search"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="color"] {
+  width: 100%;
+  height: 35px;
+  -webkit-appearance: none;
+  padding: 0 15px;
+  margin-bottom: 15px;
+  line-height: 21px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  outline: none;
+}
+
+/* line 902, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+input[type="search"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 10px;
+  font-size: 16px;
+  border-radius: 20px;
+}
+
+/* line 911, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+input[type="search"]:focus {
+  text-align: left;
+}
+
+/* line 915, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+textarea {
+  height: auto;
+}
+
+/* line 919, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+select {
+  height: auto;
+  font-size: 14px;
+  background-color: #f8f8f8;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* line 927, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.input-group {
+  background-color: #fff;
+}
+
+/* line 931, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.input-group input,
+.input-group textarea {
+  margin-bottom: 0;
+  background-color: transparent;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 943, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.input-row {
+  height: 35px;
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+}
+
+/* line 949, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.input-row label {
+  float: left;
+  width: 35%;
+  padding: 8px 15px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  line-height: 1.1;
+}
+
+/* line 957, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.input-row input {
+  float: right;
+  width: 65%;
+  padding-left: 0;
+  margin-bottom: 0;
+  border: 0;
+}
+
+/* line 965, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.segmented-control {
+  position: relative;
+  display: table;
+  overflow: hidden;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* line 975, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.segmented-control .control-item {
+  display: table-cell;
+  width: 1%;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  overflow: hidden;
+  line-height: 1;
+  color: #333;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-left: 1px solid #ccc;
+}
+
+/* line 988, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.segmented-control .control-item:first-child {
+  border-left-width: 0;
+}
+
+/* line 991, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.segmented-control .control-item:active {
+  background-color: #eee;
+}
+
+/* line 994, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.segmented-control .control-item.active {
+  background-color: #ccc;
+}
+
+/* line 998, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.segmented-control-primary {
+  border-color: #428bca;
+}
+
+/* line 1001, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.segmented-control-primary .control-item {
+  color: #428bca;
+  border-color: inherit;
+}
+
+/* line 1005, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.segmented-control-primary .control-item:active {
+  background-color: #cde1f1;
+}
+
+/* line 1008, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.segmented-control-primary .control-item.active {
+  color: #fff;
+  background-color: #428bca;
+}
+
+/* line 1013, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.segmented-control-positive {
+  border-color: #5cb85c;
+}
+
+/* line 1016, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.segmented-control-positive .control-item {
+  color: #5cb85c;
+  border-color: inherit;
+}
+
+/* line 1020, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.segmented-control-positive .control-item:active {
+  background-color: #d8eed8;
+}
+
+/* line 1023, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.segmented-control-positive .control-item.active {
+  color: #fff;
+  background-color: #5cb85c;
+}
+
+/* line 1028, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.segmented-control-negative {
+  border-color: #d9534f;
+}
+
+/* line 1031, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.segmented-control-negative .control-item {
+  color: #d9534f;
+  border-color: inherit;
+}
+
+/* line 1035, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.segmented-control-negative .control-item:active {
+  background-color: #f9e2e2;
+}
+
+/* line 1038, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.segmented-control-negative .control-item.active {
+  color: #fff;
+  background-color: #d9534f;
+}
+
+/* line 1043, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.control-content {
+  display: none;
+}
+
+/* line 1046, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.control-content.active {
+  display: block;
+}
+
+/* line 1050, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.popover {
+  position: fixed;
+  top: 55px;
+  left: 50%;
+  z-index: 20;
+  display: none;
+  width: 280px;
+  margin-left: -140px;
+  background-color: white;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  -webkit-transition: all .25s linear;
+  -moz-transition: all .25s linear;
+  transition: all .25s linear;
+  -webkit-transform: translate3d(0, -15px, 0);
+  -ms-transform: translate3d(0, -15px, 0);
+  transform: translate3d(0, -15px, 0);
+}
+
+/* line 1070, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.popover:before {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -15px;
+  content: '';
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid white;
+  border-left: 15px solid transparent;
+}
+
+/* line 1082, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.popover.visible {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 1088, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.popover .bar ~ .table-view {
+  padding-top: 44px;
+}
+
+/* line 1092, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 15;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* line 1102, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.popover .btn-block {
+  margin-bottom: 5px;
+}
+
+/* line 1105, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.popover .btn-block:last-child {
+  margin-bottom: 0;
+}
+
+/* line 1109, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.popover .bar-nav {
+  border-bottom: 1px solid #ddd;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 1117, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.popover .table-view {
+  max-height: 300px;
+  margin-bottom: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  background-color: #fff;
+  border-top: 0;
+  border-bottom: 0;
+  border-radius: 6px;
+}
+
+/* line 1128, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.modal {
+  position: fixed;
+  top: 0;
+  z-index: 11;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  opacity: 0;
+  -webkit-transition: -webkit-transform .25s, opacity 1ms .25s;
+  -moz-transition: -moz-transform .25s, opacity 1ms .25s;
+  transition: transform .25s, opacity 1ms .25s;
+  -webkit-transform: translate3d(0, 100%, 0);
+  -ms-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+
+/* line 1144, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.modal.active {
+  height: 100%;
+  opacity: 1;
+  -webkit-transition: -webkit-transform .25s;
+  -moz-transition: -moz-transform .25s;
+  transition: transform .25s;
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 1155, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.slider {
+  width: 100%;
+}
+
+/* line 1159, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.slider {
+  overflow: hidden;
+  background-color: #000;
+}
+
+/* line 1163, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.slider .slide-group {
+  position: relative;
+  font-size: 0;
+  white-space: nowrap;
+  -webkit-transition: all 0s linear;
+  -moz-transition: all 0s linear;
+  transition: all 0s linear;
+}
+
+/* line 1171, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.slider .slide-group .slide {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  vertical-align: top;
+}
+
+/* line 1179, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.toggle {
+  position: relative;
+  display: block;
+  width: 74px;
+  height: 30px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  -webkit-transition-duration: .2s;
+  -moz-transition-duration: .2s;
+  transition-duration: .2s;
+  -webkit-transition-property: background-color, border;
+  -moz-transition-property: background-color, border;
+  transition-property: background-color, border;
+}
+
+/* line 1194, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.toggle .toggle-handle {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  z-index: 2;
+  width: 28px;
+  height: 28px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 100px;
+  -webkit-transition-duration: .2s;
+  -moz-transition-duration: .2s;
+  transition-duration: .2s;
+  -webkit-transition-property: -webkit-transform, border, width;
+  -moz-transition-property: -moz-transform, border, width;
+  transition-property: transform, border, width;
+}
+
+/* line 1211, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.toggle:before {
+  position: absolute;
+  top: 3px;
+  right: 11px;
+  font-size: 13px;
+  color: #999;
+  text-transform: uppercase;
+  content: "Off";
+}
+
+/* line 1220, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.toggle.active {
+  background-color: #5cb85c;
+  border: 2px solid #5cb85c;
+}
+
+/* line 1224, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.toggle.active .toggle-handle {
+  border-color: #5cb85c;
+  -webkit-transform: translate3d(44px, 0, 0);
+  -ms-transform: translate3d(44px, 0, 0);
+  transform: translate3d(44px, 0, 0);
+}
+
+/* line 1230, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.toggle.active:before {
+  right: auto;
+  left: 15px;
+  color: #fff;
+  content: "On";
+}
+
+/* line 1236, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.toggle input[type="checkbox"] {
+  display: none;
+}
+
+/* line 1240, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.content.fade {
+  left: 0;
+  opacity: 0;
+}
+
+/* line 1244, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.content.fade.in {
+  opacity: 1;
+}
+
+/* line 1247, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.content.sliding {
+  z-index: 2;
+  -webkit-transition: -webkit-transform .4s;
+  -moz-transition: -moz-transform .4s;
+  transition: transform .4s;
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 1256, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.content.sliding.left {
+  z-index: 1;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  -ms-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+}
+
+/* line 1262, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.content.sliding.right {
+  z-index: 3;
+  -webkit-transform: translate3d(100%, 0, 0);
+  -ms-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+}
+
+/* line 1269, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.navigate-left:after,
+.navigate-right:after,
+.push-left:after,
+.push-right:after {
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  font-family: Ratchicons;
+  font-size: inherit;
+  line-height: 1;
+  color: #bbb;
+  text-decoration: none;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 1288, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.navigate-left:after,
+.push-left:after {
+  left: 15px;
+  content: '\e822';
+}
+
+/* line 1294, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.navigate-right:after,
+.push-right:after {
+  right: 15px;
+  content: '\e826';
+}
+
+@font-face {
+  font-family: Ratchicons;
+  font-style: normal;
+  font-weight: normal;
+  src: url("ratchicons.eot");
+  src: url("ratchicons.eot?#iefix") format("embedded-opentype"), url("../fonts/ratchicons.woff") format("woff"), url("ratchicons.ttf") format("truetype"), url("ratchicons.svg#svgFontName") format("svg");
+}
+/* line 1310, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon {
+  display: inline-block;
+  font-family: Ratchicons;
+  font-size: 24px;
+  line-height: 1;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 1320, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-back:before {
+  content: '\e80a';
+}
+
+/* line 1324, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-bars:before {
+  content: '\e80e';
+}
+
+/* line 1328, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-caret:before {
+  content: '\e80f';
+}
+
+/* line 1332, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-check:before {
+  content: '\e810';
+}
+
+/* line 1336, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-close:before {
+  content: '\e811';
+}
+
+/* line 1340, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-code:before {
+  content: '\e812';
+}
+
+/* line 1344, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-compose:before {
+  content: '\e813';
+}
+
+/* line 1348, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-download:before {
+  content: '\e815';
+}
+
+/* line 1352, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-edit:before {
+  content: '\e829';
+}
+
+/* line 1356, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-forward:before {
+  content: '\e82a';
+}
+
+/* line 1360, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-gear:before {
+  content: '\e821';
+}
+
+/* line 1364, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-home:before {
+  content: '\e82b';
+}
+
+/* line 1368, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-info:before {
+  content: '\e82c';
+}
+
+/* line 1372, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-list:before {
+  content: '\e823';
+}
+
+/* line 1376, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-more-vertical:before {
+  content: '\e82e';
+}
+
+/* line 1380, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-more:before {
+  content: '\e82f';
+}
+
+/* line 1384, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-pages:before {
+  content: '\e824';
+}
+
+/* line 1388, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-pause:before {
+  content: '\e830';
+}
+
+/* line 1392, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-person:before {
+  content: '\e832';
+}
+
+/* line 1396, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-play:before {
+  content: '\e816';
+}
+
+/* line 1400, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-plus:before {
+  content: '\e817';
+}
+
+/* line 1404, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-refresh:before {
+  content: '\e825';
+}
+
+/* line 1408, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-search:before {
+  content: '\e819';
+}
+
+/* line 1412, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-share:before {
+  content: '\e81a';
+}
+
+/* line 1416, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-sound:before {
+  content: '\e827';
+}
+
+/* line 1420, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-sound2:before {
+  content: '\e828';
+}
+
+/* line 1424, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-sound3:before {
+  content: '\e80b';
+}
+
+/* line 1428, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-sound4:before {
+  content: '\e80c';
+}
+
+/* line 1432, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-star-filled:before {
+  content: '\e81b';
+}
+
+/* line 1436, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-star:before {
+  content: '\e81c';
+}
+
+/* line 1440, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-stop:before {
+  content: '\e81d';
+}
+
+/* line 1444, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-trash:before {
+  content: '\e81e';
+}
+
+/* line 1448, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-up-nav:before {
+  content: '\e81f';
+}
+
+/* line 1452, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-up:before {
+  content: '\e80d';
+}
+
+/* line 1456, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-right-nav:before {
+  content: '\e818';
+}
+
+/* line 1460, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-right:before {
+  content: '\e826';
+}
+
+/* line 1464, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-down-nav:before {
+  content: '\e814';
+}
+
+/* line 1468, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-down:before {
+  content: '\e820';
+}
+
+/* line 1472, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-left-nav:before {
+  content: '\e82d';
+}
+
+/* line 1476, /Users/Adam1/rails/clone_of_props/props/app/assets/stylesheets/application.scss */
+.icon-left:before {
+  content: '\e822';
+}
