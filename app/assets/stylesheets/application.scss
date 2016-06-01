@@ -767,6 +767,7 @@
    padding: 11px 65px 11px 15px;
    overflow: hidden;
    border-bottom: 1px solid #ddd;
+
  }
  .table-view-cell:last-child {
    border-bottom: 0;
@@ -802,6 +803,10 @@
  .table-view .media,
  .table-view .media-body {
    overflow: hidden;
+ }
+
+ ul.table-view {
+   margin: 0px;
  }
 
  .table-view .media-object.pull-left {
