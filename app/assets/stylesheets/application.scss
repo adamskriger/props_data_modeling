@@ -396,11 +396,13 @@
    max-width: 75ch;
  }
 
-
-
  .editdelete {
    font-size: 10px;
  }
+
+  .btn.btn-positive.btn-block.betbutton {
+    bottom: -160px;
+  }
 
  .btn {
    position: relative;
@@ -490,12 +492,9 @@
 
  .btn-block {
    display: block;
-   height: 60px;
    width: 100%;
    padding: 15px 0;
-   margin-top: 10px !important;
-   margin-bottom: 10px !important;
-
+   margin-bottom: 10px;
    font-size: 18px;
  }
 
@@ -556,7 +555,7 @@
  }
 
  .bar-footer-secondary {
-   bottom: 98px;
+   bottom: 44px;
  }
 
  .bar-footer-secondary-tab {
@@ -574,9 +573,6 @@
    top: 0;
  }
 
-// .bar.bar-standard.bar-footer-secondary {
-//   height: 190px !important;
-// }
  .title {
    position: absolute;
    display: block;
