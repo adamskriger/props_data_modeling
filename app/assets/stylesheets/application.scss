@@ -25,6 +25,18 @@
   * =====================================================
   */
 
+
+
+@icon {
+  src: font-url('ratchicons.eot');
+  src: font-url('ratchicons.eot') format('embedded-opentype'),
+       font-url('ratchicons.woff') format('woff'),
+       font-url('ratchicons.ttf') format('truetype'),
+       font-url('ratchicons.svg') format('svg');
+}
+
+
+
 .opener {
   text-align: center;
 }
@@ -1280,9 +1292,11 @@
    font-style: normal;
    font-weight: normal;
 
-   src: url("../fonts/ratchicons.eot");
-   src: url("../fonts/ratchicons.eot?#iefix") format("embedded-opentype"), url("../fonts/ratchicons.woff") format("woff"), url("../fonts/ratchicons.ttf") format("truetype"), url("../fonts/ratchicons.svg#svgFontName") format("svg");
+   src: url("ratchicons.eot");
+   src: url("ratchicons.eot?#iefix") format("embedded-opentype"), url("../fonts/ratchicons.woff") format("woff"), url("ratchicons.ttf") format("truetype"), url("ratchicons.svg#svgFontName") format("svg");
  }
+
+
  .icon {
    display: inline-block;
    font-family: Ratchicons;
