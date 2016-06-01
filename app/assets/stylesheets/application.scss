@@ -1294,11 +1294,8 @@
    font-style: normal;
    font-weight: normal;
 
-   src: font-url( asset-path("ratchicons.eot") );
-   src: font-url( asset-path("ratchicons.eot?#iefix") ) format("embedded-opentype"),
-   font-url( asset-path("../fonts/ratchicons.woff") ) format("woff"),
-   font-url(asset-path ("ratchicons.ttf") ) format("truetype"),
-   font-url (("ratchicons.svg#svgFontName") ) format("svg");
+   src: url("ratchicons.eot");
+   src: url("ratchicons.eot?#iefix") format("embedded-opentype"), url("../fonts/ratchicons.woff") format("woff"), url("ratchicons.ttf") format("truetype"), url("ratchicons.svg#svgFontName") format("svg");
  }
 
 
