@@ -1,23 +1,12 @@
 
 
 
-<div class="content">
-
-
-
-
-
-
-
+<div class="content allpropsul">
+  <% if logged_in? and current_user.admin %>
 
       <div class="card">
         <ul class="table-view">
-          <li class="table-view-cell">
-            <a class="navigate-right" href="/props">
-              <strong>View All Bets</strong>
-            </a>
-          </li>
-          <% if logged_in? and current_user.admin %>
+
           <li class="table-view-cell">
             <a class="navigate-right" href="props/new">
               <strong>Create a Bet</strong>
@@ -29,12 +18,30 @@
             </a>
           </li>
 
-          <% end %>
-
         </ul>
       </div>
-      <div class="bar bar-standard bar-footer-secondary">
+      <% end %>
+
+      <% @props.each do |prop| %>
+
+      <ul class="table-view ">
+        <li class="table-view-cell media">
+            <img class="media-object pull-right" style="text-align: right; margin-right:-50px;;" src="http://placehold.it/82x82">
+            <div class="media-body">
+              <h5><%= link_to prop.title.capitalize, prop %><h5>
+              <p class="proplistp"><%= prop.text %></p>
+                  <% if logged_in? and current_user.admin %>
+                      <p><%= link_to 'Edit', edit_prop_path(prop), class: 'editdelete' %></p>
+                      <p><%= link_to 'Delete', prop_path(prop),
+                                                method: :delete,
+                                                data: ( 'Are you sure?' ),
+                                                class: 'editdelete' %></p>
+                    <% end %>
+              </div>
+        </li>
+      </ul>
+
+      <% end %>
 
 
-      </div>
     </div>
