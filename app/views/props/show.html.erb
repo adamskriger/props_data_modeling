@@ -1,38 +1,47 @@
 <div class="content">
-<div class="content-padded">
-<p>
-  <strong>What's the Propisition?</strong>
-  <%= @prop.title %>
-</p>
 
-<p>
-  <strong>What are the prop terms?</strong>
-  <%= @prop.text %>
-</p>
 
-<p>
-<%= @prop.choice %>
-</p>
-</div>
+  <div class="bar bar-standard bar-header-secondary">
+    <% if current_user.admin? %>
+    <button class="btn btn-block">  <%= link_to 'Edit', edit_prop_path(@prop)  %></button>
+    <% end %>
+  </div>
+<br>
+<br>
+    <div class="content-padded">
+    <p>
+
+      <strong>What's the Propisition?</strong>
+      <%= @prop.title %>
+    </p>
+
+    <p>
+      <strong>What are the prop terms?</strong>
+      <%= @prop.text %>
+    </p>
+
+    <p>
+    <%= @prop.choice %>
+    </p>
+    </div>
 
 
 
 <!-- <button class="btn btn-primary btn-block btn-outlined">  <%= link_to 'Back to All Props', props_path  %>
 </button> -->
 <div class="bar bar-standard bar-footer-secondary">
-
-<% if current_user.admin? %>
-<button class="btn btn-negative btn-block btn-outlined">  <%= link_to 'Edit', edit_prop_path(@prop)  %>
-</button>
-
-<button class="btn btn-positive btn-block betbutton">
-  <% if logged_in? %>
-      <%= link_to 'Place a Bet', new_prop_answer_path(@prop)  %>
-    <% else %>
-    <%= link_to 'Please log in to place a bet', login_path  %>
-  <% end %>
-</button>
+  <button class="btn btn-block">
+    <% if logged_in? %>
+        <%= link_to 'Place a Bet', new_prop_answer_path(@prop)  %>
+      <% else %>
+      <%= link_to 'Please log in to place a bet', login_path  %>
+    <% end %>
+  </button>
 </div>
+
+
+
+
     <!-- <br>
       <h3>Comments</h3>
         <div><%= render @prop.comments %></div>
@@ -42,4 +51,3 @@
 
         <%= render 'comments/form' %> -->
  </div>
- <% end %>
