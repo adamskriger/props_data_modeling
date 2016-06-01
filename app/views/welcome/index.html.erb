@@ -6,37 +6,35 @@
 
 
 
-      <h1 class="content-padded opener">Welcome to a Whole New Betting Experience</h1>
 
 
 
-      <p class="content-padded">Predict the outcome of real life situations and earn points when you're right. </p>
-
-      <p class="content-padded">Play against your friends and colleagues and become the master of your domain!</p>
 
       <div class="card">
         <ul class="table-view">
           <li class="table-view-cell">
-              <strong><%= link_to 'View All Props', controller: 'props'  %></strong>
+            <a class="navigate-right" href="/props">
+              <strong>View All Bets</strong>
+            </a>
           </li>
           <% if logged_in? and current_user.admin %>
-
           <li class="table-view-cell">
-
-              <strong><%= link_to 'Create a Prop', new_prop_path  %></strong>
-
+            <a class="navigate-right" href="props/new">
+              <strong>Create a Bet</strong>
+            </a>
           </li>
-
           <li class="table-view-cell">
-              <strong><%= link_to 'View All Users', users_path  %></strong>
-
+            <a class="navigate-right" href="/users">
+              <strong>View All Users</strong>
+            </a>
           </li>
 
           <% end %>
 
-
         </ul>
       </div>
+      <div class="bar bar-standard bar-footer-secondary">
 
 
+      </div>
     </div>
