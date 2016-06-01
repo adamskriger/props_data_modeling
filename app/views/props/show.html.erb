@@ -1,5 +1,7 @@
 <div class="content">
+
 <div class="content-padded">
+
 <p>
   <strong>What's the Propisition?</strong>
   <%= @prop.title %>
@@ -15,6 +17,7 @@
 </p>
 </div>
 
+<div class="bar bar-standard bar-footer-secondary">
 
 <button class="btn btn-positive btn-block">
   <% if logged_in? %>
@@ -24,19 +27,21 @@
   <% end %>
 </button>
 
-<button class="btn btn-primary btn-block btn-outlined">  <%= link_to 'Back to All Props', props_path  %>
-</button>
 
+</div>
 <% if current_user.admin? %>
 <button class="btn btn-negative btn-block btn-outlined">  <%= link_to 'Edit', edit_prop_path(@prop)  %>
 </button>
-<br>
-  <h3>Comments</h3>
-    <div><%= render @prop.comments %></div>
+
+<button class="btn btn-primary btn-block btn-outlined">  <%= link_to 'Back to All Bets', props_path  %></button>
+
+      <!-- <br>
+        <h3>Comments</h3>
+          <div><%= render @prop.comments %></div>
 
 
-    <h4>Add a Comment</h4>
+          <h4>Add a Comment</h4>
 
-    <%= render 'comments/form' %>
+          <%= render 'comments/form' %> -->
  </div>
  <% end %>
