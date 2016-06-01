@@ -7,7 +7,7 @@
       <img class="media-object pull-right" style="text-align: right; margin-right:-50px;;" src="http://placehold.it/82x82">
       <div class="media-body">
         <h5><%= link_to prop.title.capitalize, prop %><h5>
-        <p><%= prop.text %></p>
+        <p class="proplistp"><%= prop.text %></p>
             <% if logged_in? and current_user.admin %>
                 <p><%= link_to 'Edit', edit_prop_path(prop), class: 'editdelete' %></p>
                 <p><%= link_to 'Delete', prop_path(prop),
