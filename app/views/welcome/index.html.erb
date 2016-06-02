@@ -1,45 +1,28 @@
-
-
 <div class="content allpropsul">
-  <% if logged_in? and current_user.admin %>
-        <br />
-        <a href="props/new">
-          <button class="btn btn-primary btn-block btn-outlined">Create a Bet</button>
-        </a>
-        <a href="/users">
-          <button class="btn btn-primary btn-block btn-outlined">View All Users</button>
-        </a>
-      <% end %>
 
-      <% @props.each do |prop| %>
-      <ul class="table-view ">
-        <li class="table-view-cell media">
-          <a href=props/<%=prop.id%> >
-            <img class="media-object pull-right" style="text-align: right; margin-right:-50px;" src="http://placehold.it/82x82">
+  <% a = 3 %>
+  <% @props.reverse.each do |prop| %>
+    <ul class="table-view ">
+        <% if a % 3 == 0 %>
+          <li class="main bet">
+            <a href=props/<%=prop.id%> >
+              <img src="http://placehold.it/275x275">
+              <h5 style="font-size:19px; text-align:left;">
+                <strong><%= prop.title %></strong>
+              </h5>
+            </a>
+          </li>
+        <% else %>
+          <li class="table-view-cell media">
+            <a href=props/<%=prop.id%> >
+              <img class="media-object pull-right" style="text-align: right; margin-right:-50px;" src="http://placehold.it/82x82">
+              <h5><%= prop.title.capitalize %></h5>
+              <p class="proplistp"><%= prop.text %></p>
+            </a>
+          </li>
+        <% end %>
 
-            <h5><%= prop.title.capitalize %></h5>
-            <p class="proplistp"><%= prop.text %></p>
-            <div>
-
-                <% if logged_in? and current_user.admin %>
-                  <button class="btn btn-primary" class="btn pull-left">
-                    <%= link_to 'Edit', edit_prop_path(prop) %>
-                  </button>
-                  <button class="btn btn-negative" class="btn pull-left">
-                    <%= link_to 'Delete', prop_path(prop),
-                                              method: :delete,
-                                              data: ( 'Are you sure?' )
-                                               %>
-                  </button>
-              </div>
-
-                  <% end %></br >
-          </a>
-        </li>
-      </ul>
-
-
-      <% end %>
-
-
-    </div>
+    </ul>
+  <% a += 1 %>
+  <% end %>
+</div>
