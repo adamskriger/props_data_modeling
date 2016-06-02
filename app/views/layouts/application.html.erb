@@ -21,7 +21,7 @@
 </header>
 
 <nav class="bar bar-tab">
-  <a class="tab-item active" href="/">
+  <a class="tab-item active" href="/" style="color:#929292">
     <span class="icon icon-home"></span>
     <span class="tab-label">Home</span>
   </a>
@@ -29,10 +29,17 @@
     <span class="icon icon-play"></span>
     <span class="tab-label">All Bets</span>
   </a>
-  <a class="tab-item" href="#">
+  <% if logged_in? %>
+  <a class="tab-item" href=users/<%=@user.id%> >
     <span class="icon icon-person"></span>
     <span class="tab-label">My Profile</span>
   </a>
+  <% else %>
+  <a class="tab-item" >
+    <span class="icon icon-person"></span>
+    <span class="tab-label">My Profile</span>
+  </a>
+  <%end%>
   <a class="tab-item" href="#">
     <span class="icon icon-info"></span>
     <span class="tab-label">Info</span>

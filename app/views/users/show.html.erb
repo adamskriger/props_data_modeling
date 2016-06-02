@@ -1,72 +1,63 @@
 <div class="content">
 
-<p id="notice"><%= notice %></p>
-
-<p class="content-padded">
-  <strong>Username:</strong>
-  <%= @user.username.capitalize %>
-</p>
-
-<p class="content-padded">
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<p class="content-padded">
-  <strong>Score:</strong>
-  <%= @user.score %>
-</p>
+  <div>
+    <div style="text-align:center;">
+      <h5 class="username"><%= @user.username %></h5>
+      <img style="border-radius:50px;"src="http://placehold.it/82x82">
+      <p style="color:#428bca;">score: <%= @user.score %></p>
+    </div>
+    <p>
+      <button class="btn btn-block">Edit Profile</button>
+    </p>
+  </div>
 
 
 <% if logged_in? and current_user.admin %>
+  <div class="card">
 
-<div class="card">
-  <ul class="table-view">
-    <li class="table-view-cell">
-        <strong><%= link_to 'View All Props', controller: 'props'  %></strong>
-    </li>
+    <ul class="table-view">
+      <li class="table-view-cell">
+          <%= link_to 'View All Bets', controller: 'props'  %>
+      </li>
+      <li class="table-view-cell">
+          <%= link_to 'Create a Bet', new_prop_path  %>
+      </li>
+      <li class="table-view-cell">
+          <%= link_to 'View All Users', users_path  %>
+      </li>
+    </ul>
+  </div>
 
-    <li class="table-view-cell">
-
-        <strong><%= link_to 'Create a Prop', new_prop_path  %></strong>
-
-    </li>
-
-    <li class="table-view-cell">
-        <strong><%= link_to 'View All Users', users_path  %></strong>
-
-    </li>
-
-
-
-  </ul>
-</div>
-
-<div class="card">
-  <ul class="table-view">
-    <li class="table-view-cell">
-        <strong><%= link_to 'Edit My Profile', edit_user_path(@user) %>
-</strong>
-    </li>
-
-</div>
 <% end %>
 
 
-<h4 class="content-padded"><%= @user.username.capitalize%>'s Props</h4>
 
 
+<% @prop.reverse.each do |prop| %>
 
-
-<% @prop.each do |prop| %>
-
-<ul class="table-view">
+<ul class="table-view ">
   <li class="table-view-cell media">
-      <img class="media-object pull-left" src="http://placehold.it/42x42">
-      <div class="media-body">
-        <%= link_to prop.title, prop %>
-        <p><%= prop.text %></p>
+    <a href=/props/<%=prop.id%> >
+      <img class="media-object pull-right" style="text-align: right; margin-right:-50px;" src="http://placehold.it/82x82">
+
+      <h5><%= prop.title.capitalize %></h5>
+      <p class="proplistp"><%= prop.text %></p>
+      <div>
+
+          <% if logged_in? and current_user.admin %>
+            <button class="btn " class="btn pull-left">
+              <%= link_to 'Edit', edit_prop_path(prop) %>
+            </button>
+            <button class="btn " class="btn pull-left">
+              <%= link_to 'Delete', prop_path(prop),
+                                        method: :delete,
+                                        data: ( 'Are you sure?' )
+                                         %>
+            </button>
         </div>
+
+            <% end %></br >
+    </a>
   </li>
 </ul>
 

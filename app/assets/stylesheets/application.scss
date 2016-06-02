@@ -389,6 +389,22 @@
    max-width: 75ch;
  }
 
+ .p.show {
+   font-weight: 200;
+   font-size: 14px;
+ }
+ .username {
+   margin-top: 0;
+   text-align: center;
+   padding: 13px;
+   background-color: #fafafa;
+ }
+
+ .main.bet {
+   text-align: center;
+   padding: 20px;
+ }
+
  .btn {
    position: relative;
    display: inline-block;

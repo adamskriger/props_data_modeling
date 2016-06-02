@@ -1,32 +1,26 @@
 <div class="content allpropsul">
-
-<% @props.each do |prop| %>
-
-
-<ul class="table-view ">
-  <li class="table-view-cell media">
-    <a href=props/<%=prop.id%> >
-      <img class="media-object pull-right" style="text-align: right; margin-right:-50px;" src="http://placehold.it/82x82">
-
-      <h5><%= prop.title.capitalize %></h5>
-      <p class="proplistp"><%= prop.text %></p>
-        <div>
-          <% if logged_in? and current_user.admin %>
-            <button class="btn btn-primary" class="btn pull-left">
-              <%= link_to 'Edit', edit_prop_path(prop) %>
-            </button>
-            <button class="btn btn-negative" class="btn pull-right">
-              <%= link_to 'Delete', prop_path(prop),
-                                        method: :delete,
-                                        data: ( 'Are you sure?' )
-                                         %>
-            </button>
-        </div>
-            <% end %></br >
-    </a>
-  </li>
-</ul>
-
-<% end %>
-
+  <% @props.reverse.each do |prop| %>
+    <ul class="table-view ">
+      <li class="table-view-cell media">
+        <a href=props/<%=prop.id%> >
+          <img class="media-object pull-right" style="text-align: right; margin-right:-50px;" src="http://placehold.it/82x82">
+          <h5><%= prop.title.capitalize %></h5>
+          <p class="proplistp"><%= prop.text %></p>
+            <div>
+              <% if logged_in? and current_user.admin %>
+                <button class="btn " class="btn pull-left">
+                  <%= link_to 'Edit', edit_prop_path(prop) %>
+                </button>
+                <button class="btn " class="btn pull-right">
+                  <%= link_to 'Delete', prop_path(prop),
+                                            method: :delete,
+                                            data: ( 'Are you sure?' )
+                                             %>
+                </button>
+            </div>
+                <% end %></br >
+        </a>
+      </li>
+    </ul>
+  <% end %>
 </div>
