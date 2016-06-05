@@ -1,6 +1,6 @@
 <div class="content">
 
-  <% if current_user.admin? %>
+  <% if logged_in? && current_user.admin? %>
   <  div class="bar bar-standard bar-header-secondary">
       <button class="btn btn-block edit">  <%= link_to 'Edit', edit_prop_path(@prop)%></button>
     </div>

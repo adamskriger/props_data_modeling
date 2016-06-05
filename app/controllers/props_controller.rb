@@ -11,8 +11,9 @@ class PropsController < ApplicationController
 
   def show
     @prop = Prop.find(params[:id])
-    @user = User.find(session[:user_id])
-
+    if logged_in? && current_user.admin
+      @user = User.find(session[:user_id])
+    end
   end
 
   def new
@@ -70,12 +71,12 @@ class PropsController < ApplicationController
     @prop = Prop.find(params[:choice])
   end
 
-  def require_login
-    if !logged_in?
-      flash[:danger]="You must login perform that action"
-      render 'users/pleaselogin'
-    end
-  end
+  # def require_login
+  #   if !logged_in?
+  #     flash[:danger]="You must login perform that action"
+  #     render 'users/pleaselogin'
+  #   end
+  # end
 
 end
 
