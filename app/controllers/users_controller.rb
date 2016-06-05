@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  attr_accessor :user, :answer, :choice, :prop_id, :prop, :answer_id, :id
+  attr_accessor :user, :answer, :choice, :prop_id, :prop, :answer_id, :id, :avatar
 
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :require_admin, only: [:index]
@@ -84,6 +84,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:username, :email, :password)
+      params.require(:user).permit(:username, :email, :password, :avatar)
     end
 end

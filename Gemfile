@@ -7,6 +7,9 @@ gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 gem 'pg'
+gem 'aws-sdk'
+gem 'paperclip', :git=> 'https://github.com/thoughtbot/paperclip', :ref => '523bd46c768226893f23889079a7aa9c73b57d68'
+
 
 # Use SCSS for stylesheets
 # gem 'sass-rails', '~> 5.0'
@@ -53,6 +56,10 @@ group :development do
   gem 'spring'
 
   # gem 'compass-rails'
+
+#version specified for Paperclip because SDK does not work with latest version
+# ttps://github.com/thoughtbot/paperclip/issues/2021
+
 
 end
 gem 'rails_12factor', group: :production

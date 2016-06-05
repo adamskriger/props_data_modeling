@@ -3,7 +3,7 @@
   <div>
     <div style="text-align:center;">
       <h5 class="username"><%= @user.username %></h5>
-      <img style="border-radius:50px;"src="http://placehold.it/82x82">
+      <%= image_tag @user.avatar.url %>
       <p style="color:#428bca;">score: <%= @user.score %></p>
     </div>
     <p>
