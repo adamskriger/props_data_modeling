@@ -1,9 +1,8 @@
 <div class="content">
 
   <% if current_user.admin? %>
-  <div class="bar bar-standard bar-header-secondary">
-
-    <button class="btn btn-block edit">  <%= link_to 'Edit', edit_prop_path(@prop)  %></button>
+  <  div class="bar bar-standard bar-header-secondary">
+      <button class="btn btn-block edit">  <%= link_to 'Edit', edit_prop_path(@prop)%></button>
     </div>
     <br>
     <br>
@@ -11,34 +10,25 @@
 
 
     <div class="content-padded">
-      <div style="text-align:center;">
-        <img src="http://placehold.it/300x300">
-      </div>
-      <h5 style="font-size:19px;">
-        <strong><%= @prop.title %></strong>
-      </h5>
+        <div style="text-align:center;">
+          <img src="http://placehold.it/256x256">
+        </div>
+        <h5 style="font-size:19px;">
+          <strong><%= @prop.title %></strong>
+        </h5>
 
-      <p class="p show">
-        <%= @prop.text %>
-      </p>
-
-
-        <button class="btn btn-positive btn-block place">
-          <% if logged_in? and !current_user.admin%>
-              <%= link_to 'Place a Bet', new_prop_answer_path(@prop)  %>
-            <% else %>
-              <%= link_to 'Please log in to place a bet', login_path  %>
-          <% end %>
-        </button>
+        <p class="p show">
+          <%= @prop.text %>
+        </p>
     </div>
 
-
-    <!-- <br>
-      <h3>Comments</h3>
-        <div><%= render @prop.comments %></div>
-
-
-        <h4>Add a Comment</h4>
-
-        <%= render 'comments/form' %> -->
+<div class="bar bar-standard bar-footer-secondary">
+        <button class="btn btn-block">
+            <% if logged_in? and !current_user.admin%>
+              <%= link_to 'Place a Bet', new_prop_answer_path(@prop)  %>
+            <% else %>
+              <%= link_to 'Login to place a bet', login_path  %>
+            <% end %>
+        </button>
+</div>
  </div>

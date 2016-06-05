@@ -1,6 +1,6 @@
 class PropsController < ApplicationController
   attr_accessor :user, :answer, :choice, :prop_id, :prop, :answer_id, :id
-  before_action :require_login, only: [:show]
+  # before_action :require_login, only: [:show]
 
   def index
     @props=Prop.all
