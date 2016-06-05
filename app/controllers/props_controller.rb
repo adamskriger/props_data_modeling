@@ -5,7 +5,7 @@ class PropsController < ApplicationController
   def index
 
     @props=Prop.all
-    
+
     if logged_in?
     @user = User.find(session[:user_id])
     end
@@ -13,7 +13,7 @@ class PropsController < ApplicationController
 
   def show
     @prop = Prop.find(params[:id])
-    if logged_in? && current_user.admin
+    if logged_in?
       @user = User.find(session[:user_id])
     end
   end
@@ -44,23 +44,24 @@ class PropsController < ApplicationController
   end
 
   def update
-        @prop = Prop.find(params[:id])
-        # @user = User.find(1) #hardcoded to be admin
-        @prop.update(prop_params)
+       @prop = Prop.find(params[:id])
+       # @user = User.find(1) #hardcoded to be admin
+       @prop.update(prop_params)
 
-        Answer.all.each  do |answer|
-          argument = answer.user_id
-          @user = User.find(argument)
-          if (answer.prop_id == @prop.id && answer.choice == @prop.choice && @user.id = answer.user_id)
-            @user.score  += 5
-            @user.save
-          else
-            @user.score  -= 5
-            @user.save
-          end
-        end
-        redirect_to users_path
-    end
+       Answer.all.each  do |answer|
+         @user = User.find(answer.user_id)
+         if (answer.prop_id == @prop.id)
+           if (answer.choice == @prop.choice)
+             @user.score  += 5
+             @user.save
+           else
+             @user.score  -= 5
+             @user.save
+           end
+         end
+       end
+       redirect_to users_path
+   end
 
   def destroy
     @prop = Prop.find(params[:id])

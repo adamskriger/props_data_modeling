@@ -2,11 +2,17 @@
   <div class="bar bar-standard bar-header-secondary">
 
   <% if logged_in? && current_user.admin? %>
-      <button class="btn btn-block edit">  <%= link_to 'Edit', edit_prop_path(@prop)%></button>
+      <button class="btn btn-block edit">  <%= link_to 'Update this Bet', edit_prop_path(@prop)%></button>
+      <% end %>
+
     </div>
+
     <br>
     <br>
-    <% end %>
+
+
+
+
 
 
     <div class="content-padded">
@@ -24,7 +30,7 @@
 
 <div class="bar bar-standard bar-footer-secondary">
         <button class="btn btn-block">
-            <% if logged_in? and !current_user.admin%>
+            <% if logged_in?%>
               <%= link_to 'Place a Bet', new_prop_answer_path(@prop)  %>
             <% else %>
               <%= link_to 'Login to place a bet', login_path  %>

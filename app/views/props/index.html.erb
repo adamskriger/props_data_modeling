@@ -2,9 +2,9 @@
   <% @props.reverse.each do |prop| %>
     <ul class="table-view ">
       <li class="table-view-cell media">
-        <a href=props/<%=prop.id%> >
+        <a href=props/<%= prop.id %> >
           <%= image_tag prop.propimage.url, :class => "propindeximage media-object pull-right"  %>
-          <h5><%= prop.id %></h5>
+          <h5><%= prop.title %></h5>
           <p class="proplistp"><%= prop.text %></p>
             <div>
               <% if logged_in? and current_user.admin %>
