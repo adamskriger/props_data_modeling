@@ -1,9 +1,11 @@
 class PropsController < ApplicationController
-  attr_accessor :user, :answer, :choice, :prop_id, :prop, :answer_id, :id
+  attr_accessor :user, :answer, :choice, :prop_id, :prop, :answer_id, :id, :propimage
   # before_action :require_login, only: [:show]
 
   def index
+
     @props=Prop.all
+    
     if logged_in?
     @user = User.find(session[:user_id])
     end
@@ -82,5 +84,5 @@ end
 
 private
   def prop_params
-    params.require(:prop).permit(:title, :text, :choice, :user_id, :id)
+    params.require(:prop).permit(:title, :text, :choice, :user_id, :id, :propimage)
   end

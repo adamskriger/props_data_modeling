@@ -11,7 +11,7 @@
 
     <div class="content-padded">
         <div style="text-align:center;">
-          <img src="http://placehold.it/256x256">
+          <%= image_tag @prop.propimage.url, :class => "propshowimage"%>
         </div>
         <h5 style="font-size:19px;">
           <strong><%= @prop.title %></strong>

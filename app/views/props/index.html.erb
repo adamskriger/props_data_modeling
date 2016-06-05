@@ -3,8 +3,8 @@
     <ul class="table-view ">
       <li class="table-view-cell media">
         <a href=props/<%=prop.id%> >
-          <img class="media-object pull-right" style="text-align: right; margin-right:-50px;" src="http://placehold.it/82x82">
-          <h5><%= prop.title.capitalize %></h5>
+          <%= image_tag prop.propimage.url, :class => "propindeximage media-object pull-right"  %>
+          <h5><%= prop.id %></h5>
           <p class="proplistp"><%= prop.text %></p>
             <div>
               <% if logged_in? and current_user.admin %>

@@ -1,4 +1,4 @@
-<%= form_for @prop do |f| %>
+<%= form_for @prop, html: { multipart: true } do |f| %>
 
   <% if @prop.errors.any? %>
     <div class="error_explanation">
@@ -32,9 +32,10 @@ prohibited this prop from being saved:
   <%= f.label(:choice, "The Correct Answer is B") %></br >
   <%= f.radio_button(:choice, "C") %>
   <%= f.label(:choice, "The Answer Has Yet To Be Determined") %>
+  <%= f.label(:propimage, "Add an image to this bet") %>
+  <%= f.file_field :propimage %>
   <%= f.hidden_field :user_id, :value => @user.id %>
   <%= f.hidden_field :prop_id, :value => @prop.id %>
-
 
   <p>
      <button class="btn btn-positive btn-block btn-outlined"><%= f.submit %></button>
