@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
                     validates_attachment_content_type :avatar, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
   def s3_credentials
-    {:bucket => "propsbucket", :access_key_id => 'AKIAJUHX7LZLFQ7FVRIA', :secret_access_key => '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', :s3_region => 'us-east-1'}
+    {:bucket => "propsbucket", :access_key_id => ENV["ACCESS_KEY_ID"], :secret_access_key => ENV["SECRET_ACCESS_KEY"], :s3_region => 'us-east-1'}
   end
 
 

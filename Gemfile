@@ -9,7 +9,7 @@ gem 'rails', '4.2.6'
 gem 'pg'
 gem 'aws-sdk'
 gem 'paperclip', :git=> 'https://github.com/thoughtbot/paperclip', :ref => '523bd46c768226893f23889079a7aa9c73b57d68'
-
+  gem 'dotenv-rails'
 
 # Use SCSS for stylesheets
 # gem 'sass-rails', '~> 5.0'
