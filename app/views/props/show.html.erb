@@ -1,11 +1,10 @@
 <div class="content">
-  <div class="bar bar-standard bar-header-secondary">
-
   <% if logged_in? && current_user.admin? %>
-      <button class="btn btn-block edit">  <%= link_to 'Update this Bet', edit_prop_path(@prop)%></button>
-      <% end %>
 
+  <div class="bar bar-standard bar-header-secondary">
+      <button class="btn btn-block edit">  <%= link_to 'Update this Bet', edit_prop_path(@prop)%></button>
     </div>
+    <% end %>
 
     <br>
     <br>
