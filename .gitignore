@@ -16,6 +16,9 @@
 !/log/.keep
 /tmp
 
-./aws.yml
+config/environments/aws.yml
+app//environments/aws.yml
 
 .env
+
+aws.yml
